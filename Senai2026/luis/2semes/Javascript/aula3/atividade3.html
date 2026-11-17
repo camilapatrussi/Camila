@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <fieldset>
+            <legend>Dados pessoais</legend>
+             <label for="nome">Nome: </labe>
+			<input type="text" id="nome" name="dados pessoais" />
+            <br>
+              <label for="endereco">Endereço: </labe>
+			<input type="text" id="endereco" name="dados pessoais" />
+            <br>
+              <label for="cidade">Cidade: </labe>
+			<input type="text" id="cidade" name="dados pessoais" />
+            <br>
+                <label for="estado">Estado: </label>
+			<select id="estado">
+				<option>São Paulo</option>
+				<option>Rio de Janeiro</option>
+				<option>Pará</option>
+				<option>Mato Grosso</option>
+            </select>	
+        </fieldset>
+        <br>
+
+        <fieldset>
+         <legend>Dados Profissionais</legend>
+            <label for="naturezadocargo">Natureza do Gargo </labe>
+                <br>
+				<input type="radio" id="geren" name="dados Profissionais" />
+				<label for="geren">Gerencia</label>
+				<input type="radio" id="finan" name="dados Profissionais"/>
+				<label for="finan">Financeiro</label>
+				<input type="radio" id="rece" name="dados Profissionais"/>
+				<label for="rece">Recepção</label>
+                <input type="radio" id="adm" name="dados Profissionais"/>
+				<label for="adm">Administrativo</label>
+				<input type="radio" id="juri" name="dados Profissionais"/>
+				<label for="juri">Jueidico</label>
+                <br>
+                    <legend>Área de interesse</legend>
+				<input type="checkbox" id="compu"/>
+				<label for="compu">Computação</label>
+				<input type="checkbox" id="bio"/>
+				<label for="bio">Biologia</label>
+				<input type="checkbox" id="ma"/>
+				<label for="ma">Meio Ambiente</label>
+				<input type="checkbox" id="eng"/>
+				<label for="eng">Engenharia</label>
+                <input type="checkbox" id="his"/>
+				<label for="his">Historia</label>
+                <br>
+
+                 <label for="info">Mini-curriculo:</label>
+                <textarea id="info"></textarea>
+                <br>
+
+                 <input type="submit" value="Enviar" />
+                 <input type="reset" value="Limpar"/>
+
+
+        </fieldset>
+</body>
+</html>

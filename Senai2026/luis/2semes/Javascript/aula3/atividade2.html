@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>MANUTENÇÃO DE USUÁRIOS DO SISTEMA INTERNO</h1>
+    <br>
+
+    <label for="login"> Login </label>
+        <input type="text" id="login">
+        <br>
+
+        <label for="senha">Senha </label>
+        <input type="text" id="senha">
+        <br>
+
+        <label for="status">Status</label>
+        <select id="status">
+            <option>inativo</option>
+            <option>ativo</option>
+        </select>
+        <br>
+
+        <fieldset>
+            <legend>Tipo</legend>
+				<input type="radio" id="tec" name="tipo" />
+				<label for="tec">Técnico</label>
+				<input type="radio" id="prof" name="tipo"/>
+				<label for="prof">Professor</label>
+				<input type="radio" id="alu" name="tipo"/>
+				<label for="alu">Aluno</label>
+        </fieldset>
+        <br>
+
+        <label for="datacria">Data da Criação</label>
+			<input id="datacria" type="date" />
+			<br>
+        <br>
+
+          <fieldset>
+            <legend>Perfil</legend>
+				<input type="radio" id="con" name="perfil" />
+				<label for="con">Convidado</label>
+				<input type="radio" id="adm" name="perfil"/>
+				<label for="adm">Administrador</label>
+                </fieldset>
+                <br>
+
+                <label for="info">Observação</label>
+                <textarea id="info"></textarea>
+                <br>
+
+                <fieldset>
+				<legend>Módulos</legend>
+				<input type="checkbox" id="com"/>
+				<label for="com">Compras</label>
+				<input type="checkbox" id="bibli"/>
+				<label for="bibli">Biblioteca</label>
+				<input type="checkbox" id="aca"/>
+				<label for="aca">Academico</label>
+                <br>
+				<input type="checkbox" id="doc"/>
+				<label for="doc">Documentação</label>
+                <input type="checkbox" id="rh"/>
+				<label for="rh">Recursos Humanos</label>
+			</fieldset>
+            <br>
+
+            <input type="submit" value="Cadastrar" />
+            <input type="reset" value="Excluir"/>
+
+
+</body>
+</html>

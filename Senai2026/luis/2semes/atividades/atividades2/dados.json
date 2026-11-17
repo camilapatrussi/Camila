@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "nome":"corinthians",
+        "vitorias":1,
+        "empates":2,
+        "derrotas":2
+    },
+    {
+        "id":2,
+        "nome":"brasilia",
+        "vitorias":1,
+        "empates":3,
+        "derrotas":1
+    },
+    {
+        "id":3,
+        "nome":"palmeiras",
+        "vitorias":2,
+        "empates":2,
+        "derrotas":1
+    }
+]
