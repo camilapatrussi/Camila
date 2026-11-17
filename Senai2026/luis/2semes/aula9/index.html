@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha lojinha</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Lojinha de halloween</h1>
+        <p>Escolha seus produtos</p>
+    </header>
+
+    <main>
+        <section class="produtos">
+            <h2>Produtos disponíveis</h2>
+
+            <div class="produto">
+                <h3>Lente de contato vermelha</h3>
+                <p>Preço: R$ 39,00</p>
+
+                <button onclick="adicionarCarrinho('Lente de contato vermelha', 39.00)">
+                    Adicionar ao carrinho
+                </button>
+            </div>
+
+            <div class="produto">
+                <h3>Presa de Vampiro</h3>
+                <p>Preço: R$ 19,99</p>
+
+                <button onclick="adicionarCarrinho('Presa de Vampiro', 19.99)">
+                    Adicionar ao carrinho
+                </button>
+            </div>
+        </section>
+
+        <section class="carrinho">
+            <h2>Meu carrinho</h2>
+
+            <ul id="listaCarrinho"></ul>
+
+            <h3 id="total">Total: R$ 0,00</h3>
+
+            <button onclick="finalizarCompra()">Finalizar compra</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
