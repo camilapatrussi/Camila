@@ -1,216 +1,235 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
     min-height: 100vh;
-    margin: 0;
-    padding: 24px;
-    display: grid;
-    place-items: center;
-    font-family: 'Arial', sans-serif;
-    color: #fff0fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    position: relative;
+    overflow-x: hidden;
+
+    font-family: 'Poppins', sans-serif;
+    color: white;
 
     background:
-        radial-gradient(circle at 20% 20%, #54134f 0, transparent 35%),
-        radial-gradient(circle at 80% 80%, #32145c 0, transparent 35%),
-        #10091d;
-
-    background-attachment: fixed;
+        radial-gradient(circle at 15% 20%, #693b9c 0%, transparent 30%),
+        radial-gradient(circle at 85% 75%, #442b83 0%, transparent 35%),
+        radial-gradient(circle at 50% 50%, #24143e 0%, #0b0718 75%);
 }
 
-/* CARTÃO PRINCIPAL */
+/* Gatinhos decorativos */
+
+body::before {
+    content: "🐈‍⬛ ✦";
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    font-size: 35px;
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+body::after {
+    content: "✧ 🐈";
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    font-size: 35px;
+    opacity: 0.85;
+    pointer-events: none;
+}
+
+/* Cartão principal */
 
 .login-card {
-    position: relative;
-    width: min(100%, 420px);
-    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 35px;
     text-align: center;
 
-    background: rgba(30, 13, 43, 0.94);
-
-    border: 1px solid #ff65c9;
+    background: rgba(23, 13, 43, 0.94);
+    border: 1px solid #b58aff;
     border-radius: 25px;
 
     box-shadow:
-        0 0 10px #ff45c8,
-        0 0 25px rgba(255, 69, 200, 0.35),
-        inset 0 0 20px rgba(255, 69, 200, 0.08);
+        0 0 15px #a879ff66,
+        0 0 40px #7044bb55,
+        inset 0 0 25px #a879ff15;
 }
 
-/* ÍCONE */
+/* Ícone do gatinho */
 
 .lock-icon {
-    font-size: 55px;
-    margin-bottom: 15px;
-    filter: drop-shadow(0 0 12px #ff65c9);
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 38px;
+    background: #34204f;
+
+    border: 2px solid #c49aff;
+    border-radius: 20px;
+
+    box-shadow: 0 0 20px #a879ff88;
 }
 
-/* TEXTOS */
+/* Textos */
 
 .eyebrow {
-    color: #ff78d2;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 4px;
-    text-shadow: 0 0 10px #ff45c8;
+    margin-bottom: 12px;
+
+    color: #d0a8ff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
 }
 
 h1 {
-    margin: 12px 0;
-    color: #ff9cde;
-    font-size: 34px;
+    margin-bottom: 10px;
+    color: #fff;
 
-    text-shadow:
-        0 0 8px #ff45c8,
-        0 0 20px #ff45c8;
+    font-size: 30px;
+    text-shadow: 0 0 12px #a879ff;
 }
 
 .subtitle {
-    color: #d9a9d9;
-    line-height: 1.6;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
+    color: #d6c1ef;
+    font-size: 13px;
+    line-height: 1.8;
 }
 
-/* CAMPOS */
+/* Formulário */
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
 
 label {
-    display: block;
-    margin: 18px 0 8px;
-    color: #ff8bd8;
-    text-align: left;
-    font-size: 14px;
-    font-weight: bold;
+    margin-bottom: 8px;
+    color: #d6b5ff;
+    font-size: 13px;
 }
 
 input {
     width: 100%;
-    padding: 15px;
+    padding: 14px;
+    margin-bottom: 20px;
 
-    border: 1px solid #bd4aab;
+    color: white;
+    background: #160e27;
+
+    border: 1px solid #7753a5;
     border-radius: 12px;
-
     outline: none;
-    background: #190e2b;
-    color: #fff;
 
-    font-size: 14px;
-
-    box-shadow: 0 0 8px rgba(255, 69, 200, 0.15);
+    font-family: 'Poppins', sans-serif;
     transition: 0.3s;
 }
 
 input::placeholder {
-    color: #a77ba9;
+    color: #9c86b5;
 }
 
 input:focus {
-    border-color: #ff65c9;
-
-    box-shadow:
-        0 0 8px #ff45c8,
-        0 0 18px rgba(255, 69, 200, 0.4);
+    border-color: #c49aff;
+    box-shadow: 0 0 14px #a879ff77;
 }
 
-/* BOTÃO */
+/* Botões */
 
-button {
+button,
+.link-botao {
     width: 100%;
-    margin-top: 25px;
-    padding: 15px;
+    padding: 14px;
 
-    border: 1px solid #ffb0e6;
-    border-radius: 12px;
-
-    background: linear-gradient(
-        135deg,
-        #ff4fc8,
-        #bd45e8
-    );
+    display: block;
+    text-align: center;
 
     color: white;
-    font-size: 16px;
+    background: linear-gradient(90deg, #8051c9, #bd78e8);
+
+    border: none;
+    border-radius: 12px;
+
+    font-family: 'Orbitron', sans-serif;
+    font-size: 12px;
     font-weight: bold;
+    letter-spacing: 1px;
 
+    text-decoration: none;
     cursor: pointer;
-
-    box-shadow:
-        0 0 10px #ff45c8,
-        0 0 25px rgba(255, 69, 200, 0.4);
-
     transition: 0.3s;
 }
 
-button:hover {
+button:hover,
+.link-botao:hover {
     transform: translateY(-3px);
-
-    box-shadow:
-        0 0 15px #ff45c8,
-        0 0 35px #ff45c8;
+    box-shadow: 0 0 20px #b58affaa;
+    filter: brightness(1.2);
 }
 
-/* RODAPÉ */
+/* Rodapé */
 
 .rodape {
     margin-top: 28px;
-    color: #a77ba9;
-    font-size: 11px;
+    color: #b99bdf;
+    font-size: 10px;
+    letter-spacing: 1px;
 }
 
-/* BOTÃO DAS OUTRAS TELAS */
+/* Páginas de resultado */
 
-.link-botao {
-    display: block;
-    margin-top: 22px;
-    padding: 15px;
-
-    border: 1px solid #ffb0e6;
-    border-radius: 12px;
-
-    background: linear-gradient(
-        135deg,
-        #ff4fc8,
-        #bd45e8
-    );
-
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-
-    box-shadow: 0 0 12px #ff45c8;
-    transition: 0.3s;
+.result-card .subtitle {
+    margin-bottom: 22px;
 }
 
-.link-botao:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 25px #ff45c8;
+.success-icon {
+    color: #d8b5ff;
+    border-color: #c49aff;
 }
 
-/* ANIMAÇÃO SUAVE */
-
-@keyframes brilho {
-    0%, 100% {
-        box-shadow: 0 0 10px #ff45c8;
-    }
-
-    50% {
-        box-shadow: 0 0 25px #ff45c8;
-    }
+.error-icon {
+    color: #ff9bbd;
+    border-color: #ff9bbd;
+    box-shadow: 0 0 20px #ff9bbd88;
 }
 
-.login-card {
-    animation: brilho 3s infinite;
+.decoration {
+    margin: 15px 0 25px;
+    font-size: 24px;
+    letter-spacing: 5px;
 }
 
-/* CELULAR */
+/* Responsividade */
 
 @media (max-width: 480px) {
+
     .login-card {
-        padding: 28px 22px;
+        padding: 30px 22px;
     }
 
     h1 {
-        font-size: 29px;
+        font-size: 25px;
     }
+
+    body::before,
+    body::after {
+        font-size: 25px;
+    }
+
 }
